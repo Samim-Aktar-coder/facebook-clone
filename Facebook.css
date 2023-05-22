@@ -1379,11 +1379,11 @@ header {
 
 @media screen and (max-width:450px) {
     .navbar {
-        padding-inline:1rem ;
+        padding-inline: 1rem;
         grid-template-columns: .45fr .5fr 1fr;
     }
 
-    .main__content{
+    .main__content {
         width: 99%;
     }
 
@@ -1392,9 +1392,12 @@ header {
     }
 
     .what-in-your-mind__container .icon__box {
-        column-gap: 0;
         justify-content: center;
         column-gap: 3rem;
+    }
+
+    .icon__item {
+        flex-basis: 40%;
     }
 
     .icon__item.smile-icon {
@@ -1403,7 +1406,19 @@ header {
 }
 
 @media screen and (max-width:400px) {
+    html {
+        font-size: 85%;
+    }
+
     .icon__item.smile-icon {
         display: none;
+    }
+
+    .what-in-your-mind__container .icon__box {
+        column-gap: 0;
+    }
+
+    .icon__item {
+        flex-basis: 50%;
     }
 }

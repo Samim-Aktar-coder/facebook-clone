@@ -419,7 +419,7 @@ header {
 .my__story {
     width: 110px;
     min-width: 113px;
-    height: 30vh;
+    height: 200px;
     border-radius: .8rem;
     position: relative;
     overflow: hidden;
@@ -467,7 +467,7 @@ header {
 .story__item {
     width: 110px;
     min-width: 113px;
-    height: 30vh;
+    height: 200px;
     border-radius: .8rem;
     position: relative;
     overflow: hidden;
@@ -530,7 +530,7 @@ header {
 .my__reel {
     width: 110px;
     min-width: 113px;
-    height: 30vh;
+    height: 200px;
     border-radius: .8rem;
     position: relative;
     overflow: hidden;
@@ -572,7 +572,7 @@ header {
 .reel__item {
     width: 110px;
     min-width: 113px;
-    height: 30vh;
+    height: 200px;
     border-radius: .8rem;
     position: relative;
     overflow: hidden;

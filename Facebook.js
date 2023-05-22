@@ -32,3 +32,18 @@ headerItems.forEach(item => {
 });
 
 
+//!=========== Change icon with window width ==========
+
+let gamePadIcon = document.querySelector('.gamepad-icon');
+let gridMenu = document.querySelector('.grid-menu');
+
+window.addEventListener('resize', () => {
+    windowWidth = window.innerWidth;
+    if (windowWidth <= 1110) {
+        gamePadIcon.classList.replace('ri-gamepad-line', 'ri-menu-line');
+        gridMenu.classList.replace('ri-grid-fill', 'ri-add-fill');
+    } else {
+        gamePadIcon.classList.replace('ri-menu-line', 'ri-gamepad-line');
+        gridMenu.classList.replace('ri-add-fill', 'ri-grid-fill');
+    }
+});

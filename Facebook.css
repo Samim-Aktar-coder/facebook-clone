@@ -80,12 +80,20 @@ header {
 }
 
 .nav__logo .logo {
-    flex-basis: 12.5%;
-    width: 2.7rem;
+    /* flex-basis: 12.5%;
+    width: 2.7rem; */
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.logo img {
+    width: 2.5rem;
+}
+
+.gamepad {
+    display: none;
 }
 
 .input__control {
@@ -222,7 +230,7 @@ header {
 
 .main__container {
     display: grid;
-    grid-template-columns: 1fr 600px 1fr;
+    grid-template-columns: 1fr 570px 1fr;
     align-items: center;
     justify-content: space-between;
     column-gap: 4rem;
@@ -245,6 +253,7 @@ header {
 .main__list {
     border-bottom: 1px solid #424242;
     padding: 0 0 .5rem;
+    overflow-y: auto;
 }
 
 .list__item {
@@ -392,7 +401,7 @@ header {
 
 .story__content {
     display: none;
-    column-gap: .6rem;
+    column-gap: .4rem;
     max-width: 100%;
     padding-block: .8rem;
     overflow-x: auto;
@@ -408,9 +417,9 @@ header {
 }
 
 .my__story {
-    width: 115px;
+    width: 110px;
     min-width: 113px;
-    height: 28vh;
+    height: 30vh;
     border-radius: .8rem;
     position: relative;
     overflow: hidden;
@@ -437,8 +446,9 @@ header {
     position: absolute;
     left: 50%;
     bottom: 2.5rem;
-    width: 1.8rem;
-    height: 1.8rem;
+    font-size: 1.4rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     background-color: var(--theme-color);
     display: flex;
@@ -448,16 +458,16 @@ header {
 }
 
 .my__story p {
-    margin-top: 1.3rem;
+    margin-top: 2rem;
     text-align: center;
-    font-size: .8rem;
+    font-size: .76rem;
     font-weight: 600;
 }
 
 .story__item {
-    width: 115px;
+    width: 110px;
     min-width: 113px;
-    height: 28vh;
+    height: 30vh;
     border-radius: .8rem;
     position: relative;
     overflow: hidden;
@@ -518,9 +528,9 @@ header {
 }
 
 .my__reel {
-    width: 115px;
+    width: 110px;
     min-width: 113px;
-    height: 28vh;
+    height: 30vh;
     border-radius: .8rem;
     position: relative;
     overflow: hidden;
@@ -560,9 +570,9 @@ header {
 }
 
 .reel__item {
-    width: 115px;
+    width: 110px;
     min-width: 113px;
-    height: 28vh;
+    height: 30vh;
     border-radius: .8rem;
     position: relative;
     overflow: hidden;
@@ -1215,7 +1225,7 @@ header {
     border-radius: 50%;
 }
 
-.edit__logo{
+.edit__logo {
     width: 3rem;
     height: 3rem;
     background-color: #454545;
@@ -1230,23 +1240,170 @@ header {
     cursor: pointer;
 }
 
-.edit__logo:hover{
+.edit__logo:hover {
     background-color: #585858;
 }
 
-.circle{
+.circle {
     position: relative;
 }
 
-.circle::after{
+.circle::after {
     content: '';
     width: .4rem;
     height: .4rem;
-    background-color:#2ab74d;
+    background-color: #2ab74d;
     border: 2.3px solid var(--body-color);
     border-radius: 50%;
     position: absolute;
     bottom: .5rem;
     left: 2.1rem;
     z-index: 20;
+}
+
+
+
+@media screen and (max-width:1260px) {
+    .nav__logo {
+        column-gap: 0;
+    }
+
+    .input__control .input {
+        display: none;
+    }
+
+    .input__control .search {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+        border-radius: 50%;
+        background-color: var(--box-color-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: -.3rem;
+    }
+}
+
+@media screen and (max-width:1110px) {
+    .main__container .main__menu-container {
+        display: none;
+    }
+
+    .main__container {
+        grid-template-columns: 650px 1fr;
+    }
+
+    .main__content {
+        padding: .5rem 5rem;
+    }
+
+    .main__contacts {
+        width: 32%;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    html {
+        font-size: 90%;
+    }
+
+    .nav__link {
+        width: 4rem;
+    }
+
+    .main__container {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .main__content {
+        width: 75%;
+    }
+
+    .main__contacts-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width:830px) {
+    .main__content {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:700px) {
+
+    .navbar {
+        column-gap: 0;
+        justify-content: start;
+        grid-template-columns: .35fr 1fr 1fr;
+    }
+
+    .nav__link {
+        display: none;
+    }
+
+    .nav__list {
+        justify-content: flex-start;
+        margin-right: auto;
+    }
+
+    .gamepad {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gamepad i {
+        font-size: 2rem;
+    }
+
+    .main__content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:570px) {
+    .navbar {
+        grid-template-columns: .4fr 1fr 1fr;
+    }
+
+    .main__content {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .navbar {
+        padding-inline:1rem ;
+        grid-template-columns: .45fr .5fr 1fr;
+    }
+
+    .main__content{
+        width: 99%;
+    }
+
+    .padding-x {
+        padding-inline: 0;
+    }
+
+    .what-in-your-mind__container .icon__box {
+        column-gap: 0;
+        justify-content: center;
+        column-gap: 3rem;
+    }
+
+    .icon__item.smile-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .icon__item.smile-icon {
+        display: none;
+    }
 }
